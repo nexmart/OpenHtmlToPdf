@@ -37,7 +37,7 @@ namespace OpenHtmlToPdf.WkHtmlToPdf.Interop
 
         private void LoadWindowsNativeLibrary()
         {
-            _libraryHandle = Kernel32.LoadLibrary(LibraryFile.FullPathToBundledFile);
+            _libraryHandle = Kernel32.LoadLibraryW(LibraryFile.FullPathToBundledFile);
 
             if (_libraryHandle == IntPtr.Zero)
                 throw new InvalidOperationException(string.Format("Failed to load {0}", LibraryFile.FullPathToBundledFile));
